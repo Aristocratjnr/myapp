@@ -1,5 +1,5 @@
-import React from 'eact';
-import { View, Text, FlatList } from 'eact-native';
+import React from 'react';
+import { View, Text, FlatList } from 'react-native';
 
 const ExpenseList = ({ expenses }) => {
   return (
