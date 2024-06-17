@@ -1,5 +1,5 @@
-import React, { useState } from 'eact';
-import { View, Text, TextInput, Button } from 'eact-native';
+import React, { useState } from 'react';
+import { View, Text, TextInput, Button } from 'react-native';
 
 const ExpenseForm = ({ onSubmit }) => {
   const [description, setDescription] = useState('');
