@@ -1,5 +1,5 @@
 import React, { useState } from 'eact';
-import { View, Text } from 'eact-native';
+import { View, Text } from 'react-native';
 import ExpenseList from './ExpenseList';
 import ExpenseForm from './ExpenseForm';
 
