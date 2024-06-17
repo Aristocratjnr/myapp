@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'eact';
+import { View, Text } from 'eact-native';
+import ExpenseList from './ExpenseList';
+import ExpenseForm from './ExpenseForm';
 
-function App() {
+const App = () => {
+  const [expenses, setExpenses] = useState([
+    { id: 1, description: 'Rent', amount: 1000 },
+    { id: 2, description: 'Groceries', amount: 500 },
+    { id: 3, description: 'Transportation', amount: 200 },
+  ]);
+
+  const handleSubmit = (newExpense) => {
+    setExpenses([...expenses, newExpense]);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <View>
+      <Text>Expense Tracker</Text>
+      <ExpenseList expenses={expenses} />
+      <ExpenseForm onSubmit={handleSubmit} />
+    </View>
   );
-}
+};
 
 export default App;
